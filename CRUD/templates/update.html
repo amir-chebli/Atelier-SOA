@@ -1,0 +1,18 @@
+<!-- templates/update.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Resource</title>
+</head>
+<body>
+    <h1>Edit Resource</h1>
+    <form method="POST" action="/resources/{{ resource.id }}/edit">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="{{ resource.name }}" required>
+        <button type="submit">Update</button>
+    </form>
+    <a href="/resources/{{ resource.id }}">Back to Resource Detail</a>
+</body>
+</html>
